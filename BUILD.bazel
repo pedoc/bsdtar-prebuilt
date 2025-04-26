@@ -1,4 +1,11 @@
 load("@aspect_bazel_lib//lib:transitions.bzl", "platform_transition_filegroup")
+load("@bazel//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "libarchive",
+    urls = ["https://github.com/libarchive/libarchive/archive/refs/tags/v3.7.9.tar.gz"],
+    strip_prefix = "libarchive-3.7.9"
+)
 
 PLATFORMS = [
     "@zig_sdk//platform:darwin_amd64",
