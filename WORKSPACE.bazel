@@ -1,1 +1,9 @@
 # Marks this as the root of a Bazel workspace
+
+load("@bazel//tools/build_defs/repo:git.bzl", "git_repository")
+
+git_repository(
+    name = "libarchive",
+    remote = "https://github.com/libarchive/libarchive.git",
+    commit = "v3.7.9"
+)
