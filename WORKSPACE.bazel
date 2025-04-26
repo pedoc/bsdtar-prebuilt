@@ -1,1 +1,7 @@
 # Marks this as the root of a Bazel workspace
+
+http_archive(
+    name = "libarchive",
+    urls = ["https://github.com/libarchive/libarchive/archive/refs/tags/v3.7.9.tar.gz"],
+    strip_prefix = "libarchive-3.7.9"
+)
